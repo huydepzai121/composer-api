@@ -1,0 +1,30 @@
+services:
+  composer-api:
+    build:
+      context: .
+      target: dev
+    image: composer-api:dev
+    container_name: composer-api
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    volumes:
+      # Live-reload: mount source code into the container
+      - ./src:/app/src
+      - ./worker:/app/worker
+      - ./public:/app/public
+      - ./migrations:/app/migrations
+      - ./index.html:/app/index.html
+      - ./vite.config.ts:/app/vite.config.ts
+      - ./vitest.config.ts:/app/vitest.config.ts
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./wrangler.jsonc:/app/wrangler.jsonc
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+      # Secrets (wrangler reads /app/.dev.vars itself; not baked into the image)
+      - ./.dev.vars:/app/.dev.vars:ro
+      # Persist wrangler local D1/KV state across container restarts
+      - wrangler-state:/app/.wrangler
+
+volumes:
+  wrangler-state:

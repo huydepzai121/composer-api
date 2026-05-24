@@ -1,0 +1,16 @@
+node_modules
+dist
+.wrangler
+.git
+.gitignore
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+.DS_Store
+*.log
+npm-debug.log*
+.vscode
+.idea
+README.md
+LICENSE
