@@ -6,8 +6,10 @@ services:
     image: composer-api:dev
     container_name: composer-api
     restart: unless-stopped
+    # Host port mặc định 52573 để tránh đụng các dịch vụ Vite/Wrangler khác (5173/8787).
+    # Override khi cần: HOST_PORT=12345 docker compose up
     ports:
-      - "5173:5173"
+      - "${HOST_PORT:-52573}:5173"
     volumes:
       # Live-reload: mount source code into the container
       - ./src:/app/src
