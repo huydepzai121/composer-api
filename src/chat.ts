@@ -45,20 +45,15 @@ const MODELS = [
   { id: "composer-2.5-fast", label: "composer-2.5-fast" },
   { id: "composer-2", label: "composer-2" },
   { id: "composer-latest", label: "composer-latest" },
-  { id: "gpt-5.3-codex", label: "gpt-5.3-codex" },
-  { id: "gpt-5.2-codex", label: "gpt-5.2-codex" },
-  { id: "gpt-5.1-codex-max", label: "gpt-5.1-codex-max" },
-  { id: "gpt-5.1-codex-mini", label: "gpt-5.1-codex-mini" },
-  { id: "gpt-5.2", label: "gpt-5.2" },
-  { id: "gpt-5.1", label: "gpt-5.1" },
-  { id: "gpt-5-mini", label: "gpt-5-mini" },
-  { id: "gemini-3.1-pro", label: "gemini-3.1-pro" },
-  { id: "gemini-3.5-flash", label: "gemini-3.5-flash" },
-  { id: "gemini-3-flash", label: "gemini-3-flash" },
-  { id: "gemini-2.5-flash", label: "gemini-2.5-flash" },
-  { id: "grok-build-0.1", label: "grok-build-0.1" },
-  { id: "grok-4.3", label: "grok-4.3" },
-  { id: "kimi-k2.5", label: "kimi-k2.5" }
+  { id: "claude-opus-4-7-thinking-high", label: "claude-opus-4-7-thinking-high" },
+  { id: "claude-4.6-opus-high-thinking", label: "claude-4.6-opus-high-thinking" },
+  { id: "claude-4.6-opus-high-thinking-fast", label: "claude-4.6-opus-high-thinking-fast" },
+  { id: "gpt-5.5-high", label: "gpt-5.5-high" },
+  { id: "gpt-5.5-high-fast", label: "gpt-5.5-high-fast" },
+  { id: "gpt-5.4-high", label: "gpt-5.4-high" },
+  { id: "gpt-5.4-high-fast", label: "gpt-5.4-high-fast" },
+  { id: "gpt-5.3-codex-high", label: "gpt-5.3-codex-high" },
+  { id: "gpt-5.3-codex-high-fast", label: "gpt-5.3-codex-high-fast" }
 ];
 
 const STATE_KEY = "cursor-chat.state.v1";
